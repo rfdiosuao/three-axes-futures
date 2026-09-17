@@ -1,0 +1,22 @@
+# —— 凭证与登录态（严禁提交）——
+.panda/
+credentials.json
+*.credentials.json
+*.token
+config.local.*
+*.local.json
+
+# —— Python ——
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# —— 每日实时运行产物（examples/ 下的历史示例仍保留）——
+/reports/
+/snapshots/
+/three_axes_latest.md
+/three_axes_brief.md
+
+# —— 系统 ——
+.DS_Store
