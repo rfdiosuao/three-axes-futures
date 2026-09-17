@@ -1,158 +1,73 @@
-# 端到端流水线、数据源与自动化（PIPELINE）
+# 运行、复算与可选发布
 
-本文档说明从免费数据到“每日飞书日报 + 多维表格 + 群推送”的完整流程、所需授权、定时计划与故障处理。所有飞书/群/表格 ID 均为**占位符**，请在本地 `config.local.json`（已被 `.gitignore` 忽略）中填写你自己的值。
+本文件区分已经存在的本地程序与需要自行部署的发布流程。仓库不会自动创建飞书文档、登记多维表格或推送群消息。
 
----
+## 1. 运行环境
 
-## 1. 数据源（全部免费 / 只读）
-
-| 用途 | 来源 | 接口 / 命令 | 备注 |
-|---|---|---|---|
-| 主力连续日 K（开高低收/成交量/持仓量/结算价） | AkShare 聚合新浪 | `ak.futures_main_sina(symbol="AU0")` | 中文列；主力符号形如 `AU0` |
-| 英文列日 K（监控脚本用） | AkShare | `ak.futures_zh_daily_sina(symbol="AU2612")` | 列 `date/open/high/low/close/volume/hold/settle` |
-| 主力清单 | AkShare | `ak.futures_display_main_sina()` | 返回 symbol/exchange/name |
-| 合约规则（乘数/保证金/涨跌停/tick） | AkShare | `ak.futures_rule()` | 交易所标准，期货公司可能加收 |
-| 仿真账户/持仓/实时行情 | PandaAI CLI | `panda account/positions/quote <symbol> --json` | 只读；凭证由 CLI 管理 |
-| 新浪实时行情（兜底） | 新浪 | `https://hq.sinajs.cn/list=nf_AU2612` | 需请求头 `Referer: https://finance.sina.com.cn`，GBK 转码 |
-| 交易所官网 | SHFE/INE/DCE/CZCE/CFFEX/GFEX | 见下 | 延时行情、持仓排名、仓单库存 |
-| 财经日历 | 金十数据 | https://www.jin10.com | 事件**只给链接、人工核对**，不臆测数值 |
-
-交易所官网：上期所 https://www.shfe.com.cn ｜ 上海能源中心 https://www.ine.com.cn ｜ 大商所 http://www.dce.com.cn ｜ 郑商所 http://www.czce.com.cn ｜ 中金所 http://www.cffex.com.cn ｜ 广期所 http://www.gfex.com.cn 。
-
-合规：公开数据仅限个人学习，**不得商用转售、不得高频抓取**；脚本串行拉取并对失败品种跳过，建议控频、缓存、标注时间戳。
-
----
-
-## 2. 环境准备
+Python 3.10+，依赖版本见requirements.txt。本次验证使用Python 3.10、AkShare 1.18.88、pandas 2.3.3。PandaAI与lark-cli是可选外部工具，不属于pip依赖。
 
 ```bash
-# Python 依赖
-pip install -r requirements.txt
-
-# PandaAI CLI（仿真行情/账户，可选；缺失时日报的账户段落会自动降级）
-#   按 PandaAI 官方安装指引安装后执行 panda login / OAuth 授权；
-#   凭证保存在 ~/.panda/，切勿提交或外传。
-panda doctor          # 只读自检
-panda account --json  # 只读验证
-
-# 飞书 CLI（自动推送，可选；纯本地跑数据不需要）
-#   安装 lark-cli 并完成用户身份授权（--as user）。
+python -m pip install -r requirements.txt
+python daily_report.py --date 2026-09-16
 ```
 
-只读自检命令（均不产生交易）：`panda whoami`、`panda doctor`、`panda account --json`、`panda positions --json`、`panda quote AU2612 --json`。
+每个行情接口在独立子进程中执行，默认30秒超时；可用 `--timeout 20` 调整。取数按品种顺序执行，不无限重试。若只核验部分品种，可用 `--symbols AU0,M0,IF0`。
 
----
+## 2. 输入和输出
 
-## 3. 三个脚本的输入与产物
+- `raw/<run_id>/manifest.json`：输入目录索引、日期、来源、请求时间、版本、文件哈希和失败项。
+- `raw/<run_id>/*.csv`：AkShare返回的行情表和合约规则表。
+- `reports/daily_report_<date>_<run_id>.md`：完整可读报告。
+- 同名XML：同一内容结构导出的飞书格式。
+- `reports/meta_<date>_<run_id>.json`：结构化计算结果和证据状态。
+- `reports/latest_meta.json`：最近一次运行结果；不是每日唯一发布记录。
+- `snapshots/regime_<date>_<run_id>.csv`：用于对比的汇总快照。
 
-| 脚本 | 输入 | 产物 | 用途 |
-|---|---|---|---|
-| `screen_three_axes.py` | AkShare 日 K + 合约规则 | `three_axes_latest.md`、`three_axes_brief.md` | 全市场共振筛选 + 止损/手数 |
-| `daily_report.py` | 同上 + `panda account/positions/quote` | `reports/daily_report_<交易日>.xml`、`reports/latest_meta.json`、`snapshots/regime_<日>.csv`；stdout 打印 meta JSON | 八段式复盘日报（飞书 XML） |
-| `monitor_gold.py` | `panda account/positions/quote AU2612` + AkShare ATR | stdout：首行 `LEVEL=NONE/INFO/WARN/DANGER/ERROR` + Markdown 简报 | 黄金第一层风险监控 |
+每次运行保留独立结果，避免重新运行覆盖历史证据。stdout输出一个meta JSON，进度写入stderr。无有效品种时退出码2，并保留诊断报告；部分有效时仍可生成报告，缺失项和覆盖数必须一起阅读。
 
-输出根目录默认是脚本所在目录，可用 `FUTURES_HOME=/some/dir` 覆盖。日报的“新进入/跌出共振”由脚本用日 K 历史**回算上一交易日状态**得到，不依赖是否连续运行；同时落一份当日快照 CSV 便于追溯。
+输出目录由 `--output-dir` 或 `FUTURES_HOME` 控制；不要依赖旧版固定日期文件名定位最新报告，应读取meta中的路径。
 
----
-
-## 4. 每日盘后自动化（工作日 17:25）
-
-`daily_report.py` 已把“写作”固化为生成飞书 XML，自动化只负责“跑脚本 → 建文档 → 登记表格 → 发群”。以下 `<...>` 均替换为你自己的值（参考 `push.config.example.json`）。
+## 3. 离线复算
 
 ```bash
-# 4.1 生成当日报告（前台运行，timeout ≥ 260s；记录 stdout 的 meta JSON）
-python3 daily_report.py
-
-# 4.2 校验飞书 XML（要求 data.assessment.status = passed）
-lark-cli docs +script --command parse \
-  --content "@./reports/daily_report_<date>.xml" --format json
-
-# 4.3 创建当日飞书云文档，记录返回的 data.document.url
-lark-cli docs +create --as user --doc-format xml \
-  --content "@./reports/daily_report_<date>.xml" --format json
-
-# 4.4 多维表格：先按日期查重，已存在则跳过追加
-lark-cli base +record-list --as user \
-  --base-token <BASE_TOKEN> --table-id <TABLE_ID> --limit 200 --format json
-#   行数据在 data.data、列名在 data.fields；不存在当日记录则追加：
-lark-cli base +record-batch-create --as user \
-  --base-token <BASE_TOKEN> --table-id <TABLE_ID> --json @row.json
+python daily_report.py --replay raw/<run_id>/manifest.json
 ```
 
-`row.json` 形如（字段值取自 meta JSON 与文档 URL）：
+重放先检查输入文件SHA256，再使用当前代码计算。当前代码可能与采集时不同，应对照manifest中的代码哈希；同一输入在不同公式版本下的差异不能叫作行情变化。
 
-```json
-{
-  "create_records": [
-    {
-      "报告日期": "2026-09-16",
-      "星期": "周三",
-      "市场温度": "均衡分化",
-      "多头共振": 13,
-      "空头共振": 14,
-      "涨/跌": "35/14",
-      "报告链接": "[三板斧期市日报·2026-09-16](https://<tenant>.feishu.cn/docx/<DOC_TOKEN>)",
-      "备注": "新进入多头：豆粕、菜粕"
-    }
-  ]
-}
-```
+`--legacy-snapshot` 是单独的旧快照预览路径，不属于完整复算，因为旧CSV没有OHLC、均线证据及历史规则。
+
+## 4. 账户查询
+
+`--account` 查询当前Panda持仓。失败或未知不能显示无持仓；挂单未查询。历史日报不会自动混入黄金实时价。
+
+黄金监控脚本要求可识别的 `equity` 权益字段，只处理配置的AU2612合约。其他黄金合约、多条无法合并的持仓或含义不明的字段会明确报错。该字段契约尚未在当前机器连接真实Panda账户验证，不得宣称已完成账户集成验收。
+
+## 5. 飞书导入
+
+本次查阅的本机lark-cli使用 `docs +create`；旧文档中的 `docs +script --command parse` 在本机CLI中不可用。使用前通过以下入口阅读与安装版本匹配的说明：
 
 ```bash
-# 4.5 向飞书群推送「当日文档链接 + 表格链接」（列表版，勿用 GFM 表格）
-lark-cli im +messages-send --as user \
-  --chat-id <CHAT_ID> --idempotency-key "daily-report-<date>" \
-  --markdown "$(cat group_msg.md)"
+lark-cli skills read lark-doc
+lark-cli docs +create --help
 ```
 
-多维表格字段（建表时一次配齐，首列为主字段文本）：
+XML标签使用该CLI文档支持的title、h1/h2、p及table结构。本地回归测试检查XML能解析、文本正确转义，以及数据与报告一致；这不等于已经在线验证飞书渲染或发布成功。
 
-| 字段 | 类型 | 说明 |
-|---|---|---|
-| 报告日期 | text（主字段，YYYY-MM-DD） | ISO 日期天然按字典序=时间序 |
-| 星期 | text | 周一…周五 |
-| 市场温度 | 单选 | 偏多 / 偏空 / 均衡分化 |
-| 多头共振 / 空头共振 | number（精度 0） | 共振品种数 |
-| 涨/跌 | text | 形如 `35/14` |
-| 报告链接 | text（style=url） | 写 Markdown 链接 |
-| 备注 | text | 新进入/跌出共振等 |
+若需要发布，先取得meta中的XML相对路径，再按当前CLI说明创建文档。`--content @file` 需位于当前工作目录内。较长报告应按CLI长文档流程分节写入，以免受远端块数限制。本文不保留未经本机版本确认的多维表格或消息字段示例。
 
-建表命令：`lark-cli base +base-create --as user --name "三板斧期市日报·索引台账" --table-name "每日报告" --fields '<字段 JSON 数组>'`。
+## 6. 调度和去重
 
----
+调度、交易所日历和发布事务尚未实现。Windows可用任务计划程序，其他环境可用适合该平台的调度器；任务应在源站日线更新后运行，不能把“工作日”当作“交易日”。
 
-## 5. 定时计划（cron，工作日）
+发布若要自动化，至少应持久化交易日、内容版本、文档ID、表格记录ID和消息ID。创建文档后再查表，不能避免重复建文档；消息幂等键也不能替文档创建去重。现有config示例仅为部署设计参考，不由Python程序自动加载。
 
-| 任务 | 表达式 | 动作 | 推送策略 |
-|---|---|---|---|
-| 每日复盘日报 | `25 17 * * 1-5` | 第 4 节全流程 | 每天发「文档链接 + 表格链接」 |
-| 黄金风险扫描 | `*/15 9-14,21-23 * * 1-5` | `monitor_gold.py` | 仅 WARN/DANGER/ERROR 才发群，NONE/INFO 静默 |
-| 黄金收盘小结 | `7 15 * * 1-5` | `monitor_gold.py --brief` | 每天一条收盘简报 |
+## 7. 运行故障
 
-时间选择理由：17:25 在日盘收盘结算之后、数据已稳定，且避开 15:30–17:00 的任务高峰，夜盘 21:00 开盘前可阅读。日报任务用 `--idempotency-key daily-report-<date>` 与“表格按日期查重”双重去重，**同一天不会重复建文档/重复加行/重复发群**。
+输入超时或缺失：先看manifest与报告的异常表，必要时只补取失败品种；不要将部分样本冒充完整覆盖。
 
----
+行情日期不匹配：核对研究日及源站更新状况，避免为了通过检查直接改写日期。前结算缺失：保留该字段未知，不能悄悄改用前收盘。
 
-## 6. 风险监控分级（monitor_gold.py）
+规则接口失败：环境分析可以继续，仓位与保证金保持未知。账户失败：不影响公开行情分析，但不能继续出账户安全结论。
 
-- 有持仓：浮亏达风险预算（权益 1%）的 **50%=关注(INFO) / 80%=警告(WARN) / 100%=危险(DANGER)**；逼近涨跌停（区间 3% 内）直接 DANGER。
-- 无持仓：仅当当日已走出涨跌停幅度 70%、或振幅显著放大（≥1.5×ATR/价）才 WARN；`--brief` 或收盘时段输出 INFO 小结。
-- 取不到有效行情：输出 `LEVEL=ERROR`，发一条通道异常提示，**不反复重试**，提示需重新授权。
-- 任何平仓/离场都必须用户手动确认，脚本与 Agent **不得自动下单/撤单/改单**。
-
----
-
-## 7. 故障恢复与降级
-
-- **源站限流 / 个别品种失败**：脚本跳过并在报告末尾标注失败品种，不影响其余结论；大量失败时重试一次，仍失败则发故障说明，**不编造数据**。
-- **Panda 登录态失效**：账户/持仓/行情段落降级，监控脚本走 ERROR 通道提示重新授权；不读取、不转发 `~/.panda/credentials.json`。
-- **飞书登录态失效**：数据脚本照常产出本地 XML/CSV，重新授权 `lark-cli` 后可补建文档、补登表格。
-- **宏观/地缘/财经日历**：免费数据无法可靠自动化，日报只给金十日历链接，**不杜撰新闻、数值、概率或买卖方向**。
-
----
-
-## 8. 安全红线
-
-- 凭证、Cookie、Token、手机号、群/用户 ID 不进仓库、不进文档、不进群消息。
-- 脚本全程只读；真实交易必须 `--dry-run` → 冻结计划 → 用户明确确认，Agent 只执行被确认的动作、不代决策。
-- 报告与消息始终保留“不构成投资建议”。
+raw、reports和snapshots默认不提交Git。分享结果前清除账户信息，保留研究日期、来源、覆盖范围和证据状态。

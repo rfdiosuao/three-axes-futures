@@ -1,6 +1,7 @@
 # Python 依赖（免费数据与计算）
-akshare>=1.18
-pandas>=2.0
+akshare==1.18.88
+pandas==2.3.3
+tzdata>=2024.1
 
 # 以下两个是外部命令行工具（CLI），不是 pip 包，需各自安装并完成授权：
 #   panda      PandaAI 期货仿真 CLI：行情 / 账户 / 持仓只读查询，以及人工确认后的交易

@@ -15,6 +15,7 @@ venv/
 # —— 每日实时运行产物（examples/ 下的历史示例仍保留）——
 /reports/
 /snapshots/
+/raw/
 /three_axes_latest.md
 /three_axes_brief.md
 

@@ -1,0 +1,2297 @@
+{
+  "date": "2026-09-16",
+  "scanned": 51,
+  "up": 31,
+  "down": 14,
+  "flat": 2,
+  "long_n": 13,
+  "short_n": 14,
+  "unknown_n": 0,
+  "temperature": "无法判断",
+  "positions_status": "unknown",
+  "independently_verified": false,
+  "evidence_status": "single_source_checked",
+  "rows": [
+    {
+      "symbol": "AU0",
+      "name": "黄金",
+      "sector": "贵金属",
+      "date": "2026-09-16",
+      "last": 940.52,
+      "chg": 0.00998689890681037,
+      "atr": 19.255714285714273,
+      "side": "flat",
+      "side_prev": "flat",
+      "evidence": {
+        "includes_partial_periods": true,
+        "monthly": {
+          "close": 940.52,
+          "ma": 998.448,
+          "ma_prev": 999.7879999999999
+        },
+        "weekly": {
+          "close": 940.52,
+          "ma": 936.64,
+          "ma_prev": 932.382
+        },
+        "daily": {
+          "close": 940.52,
+          "ma": 949.3,
+          "ma_prev": 949.07
+        },
+        "side": "flat"
+      },
+      "hold_change": 8726.0,
+      "quadrant": "价涨仓增",
+      "mult": 1000.0,
+      "margin_rate": 26.0,
+      "margin": 244535.2,
+      "stop_distance": 28.883571428571408,
+      "stop_px": null,
+      "notes": [],
+      "lots": 0,
+      "risk_lots": 1,
+      "exposure_lots": 0,
+      "binding": "exposure",
+      "risk_per_lot": 28883.57142857141,
+      "notional_per_lot": 940520.0
+    },
+    {
+      "symbol": "AG0",
+      "name": "白银",
+      "sector": "贵金属",
+      "date": "2026-09-16",
+      "last": 15832.0,
+      "chg": 0.024062095730918553,
+      "atr": 572.1428571428571,
+      "side": "flat",
+      "side_prev": "flat",
+      "evidence": {
+        "includes_partial_periods": true,
+        "monthly": {
+          "close": 15832.0,
+          "ma": 18345.2,
+          "ma_prev": 18034.7
+        },
+        "weekly": {
+          "close": 15832.0,
+          "ma": 15497.4,
+          "ma_prev": 15379.8
+        },
+        "daily": {
+          "close": 15832.0,
+          "ma": 15945.0,
+          "ma_prev": 15924.9
+        },
+        "side": "flat"
+      },
+      "hold_change": 1579.0,
+      "quadrant": "价涨仓增",
+      "mult": 15.0,
+      "margin_rate": 30.0,
+      "margin": 71244.0,
+      "stop_distance": 858.2142857142857,
+      "stop_px": null,
+      "notes": [],
+      "lots": 2,
+      "risk_lots": 3,
+      "exposure_lots": 2,
+      "binding": "exposure",
+      "risk_per_lot": 12873.214285714284,
+      "notional_per_lot": 237480.0
+    },
+    {
+      "symbol": "CU0",
+      "name": "铜",
+      "sector": "有色",
+      "date": "2026-09-16",
+      "last": 107740.0,
+      "chg": 0.007575049097540365,
+      "atr": 1372.857142857143,
+      "side": "flat",
+      "side_prev": "flat",
+      "evidence": {
+        "includes_partial_periods": true,
+        "monthly": {
+          "close": 107740.0,
+          "ma": 103280.0,
+          "ma_prev": 101249.0
+        },
+        "weekly": {
+          "close": 107740.0,
+          "ma": 107160.0,
+          "ma_prev": 106757.0
+        },
+        "daily": {
+          "close": 107740.0,
+          "ma": 109210.0,
+          "ma_prev": 109240.0
+        },
+        "side": "flat"
+      },
+      "hold_change": -14718.0,
+      "quadrant": "价涨仓减",
+      "mult": 5.0,
+      "margin_rate": 16.0,
+      "margin": 86192.0,
+      "stop_distance": 2059.285714285714,
+      "stop_px": null,
+      "notes": [],
+      "lots": 0,
+      "risk_lots": 4,
+      "exposure_lots": 0,
+      "binding": "exposure",
+      "risk_per_lot": 10296.42857142857,
+      "notional_per_lot": 538700.0
+    },
+    {
+      "symbol": "AL0",
+      "name": "铝",
+      "sector": "有色",
+      "date": "2026-09-16",
+      "last": 24185.0,
+      "chg": 0.0060316139767055965,
+      "atr": 247.85714285714286,
+      "side": "flat",
+      "side_prev": "flat",
+      "evidence": {
+        "includes_partial_periods": true,
+        "monthly": {
+          "close": 24185.0,
+          "ma": 23935.0,
+          "ma_prev": 23677.5
+        },
+        "weekly": {
+          "close": 24185.0,
+          "ma": 23831.0,
+          "ma_prev": 23718.0
+        },
+        "daily": {
+          "close": 24185.0,
+          "ma": 24315.0,
+          "ma_prev": 24306.5
+        },
+        "side": "flat"
+      },
+      "hold_change": 15977.0,
+      "quadrant": "价涨仓增",
+      "mult": 5.0,
+      "margin_rate": 16.0,
+      "margin": 19348.0,
+      "stop_distance": 371.7857142857143,
+      "stop_px": null,
+      "notes": [],
+      "lots": 4,
+      "risk_lots": 26,
+      "exposure_lots": 4,
+      "binding": "exposure",
+      "risk_per_lot": 1858.9285714285713,
+      "notional_per_lot": 120925.0
+    },
+    {
+      "symbol": "ZN0",
+      "name": "锌",
+      "sector": "有色",
+      "date": "2026-09-16",
+      "last": 26300.0,
+      "chg": 0.007084051311506689,
+      "atr": 522.1428571428571,
+      "side": "flat",
+      "side_prev": "flat",
+      "evidence": {
+        "includes_partial_periods": true,
+        "monthly": {
+          "close": 26300.0,
+          "ma": 24816.0,
+          "ma_prev": 24428.5
+        },
+        "weekly": {
+          "close": 26300.0,
+          "ma": 25782.5,
+          "ma_prev": 25639.0
+        },
+        "daily": {
+          "close": 26300.0,
+          "ma": 26875.0,
+          "ma_prev": 26903.5
+        },
+        "side": "flat"
+      },
+      "hold_change": 2467.0,
+      "quadrant": "价涨仓增",
+      "mult": 5.0,
+      "margin_rate": 16.0,
+      "margin": 21040.0,
+      "stop_distance": 783.2142857142857,
+      "stop_px": null,
+      "notes": [],
+      "lots": 3,
+      "risk_lots": 12,
+      "exposure_lots": 3,
+      "binding": "exposure",
+      "risk_per_lot": 3916.0714285714284,
+      "notional_per_lot": 131500.0
+    },
+    {
+      "symbol": "NI0",
+      "name": "镍",
+      "sector": "有色",
+      "date": "2026-09-16",
+      "last": 122040.0,
+      "chg": -0.01644100580270791,
+      "atr": 2075.0,
+      "side": "short",
+      "side_prev": "short",
+      "evidence": {
+        "includes_partial_periods": true,
+        "monthly": {
+          "close": 122040.0,
+          "ma": 134959.0,
+          "ma_prev": 134463.0
+        },
+        "weekly": {
+          "close": 122040.0,
+          "ma": 128519.0,
+          "ma_prev": 129133.0
+        },
+        "daily": {
+          "close": 122040.0,
+          "ma": 126401.0,
+          "ma_prev": 126888.0
+        },
+        "side": "short"
+      },
+      "hold_change": -2762.0,
+      "quadrant": "价跌仓减",
+      "mult": 1.0,
+      "margin_rate": 18.0,
+      "margin": 21967.2,
+      "stop_distance": 3112.5,
+      "stop_px": 125152.5,
+      "notes": [],
+      "lots": 4,
+      "risk_lots": 16,
+      "exposure_lots": 4,
+      "binding": "exposure",
+      "risk_per_lot": 3112.5,
+      "notional_per_lot": 122040.0
+    },
+    {
+      "symbol": "SN0",
+      "name": "锡",
+      "sector": "有色",
+      "date": "2026-09-16",
+      "last": 398430.0,
+      "chg": 0.009910777653857838,
+      "atr": 8938.57142857143,
+      "side": "short",
+      "side_prev": "short",
+      "evidence": {
+        "includes_partial_periods": true,
+        "monthly": {
+          "close": 398430.0,
+          "ma": 400445.0,
+          "ma_prev": 391106.0
+        },
+        "weekly": {
+          "close": 398430.0,
+          "ma": 418385.0,
+          "ma_prev": 420110.0
+        },
+        "daily": {
+          "close": 398430.0,
+          "ma": 411424.0,
+          "ma_prev": 412877.0
+        },
+        "side": "short"
+      },
+      "hold_change": -2703.0,
+      "quadrant": "价涨仓减",
+      "mult": 1.0,
+      "margin_rate": 23.0,
+      "margin": 91638.9,
+      "stop_distance": 13407.857142857145,
+      "stop_px": 411837.85714285716,
+      "notes": [],
+      "lots": 1,
+      "risk_lots": 3,
+      "exposure_lots": 1,
+      "binding": "exposure",
+      "risk_per_lot": 13407.857142857145,
+      "notional_per_lot": 398430.0
+    },
+    {
+      "symbol": "RB0",
+      "name": "螺纹钢",
+      "sector": "黑色",
+      "date": "2026-09-16",
+      "last": 3126.0,
+      "chg": 0.007412181759587577,
+      "atr": 39.0,
+      "side": "flat",
+      "side_prev": "flat",
+      "evidence": {
+        "includes_partial_periods": true,
+        "monthly": {
+          "close": 3126.0,
+          "ma": 3122.5,
+          "ma_prev": 3120.9
+        },
+        "weekly": {
+          "close": 3126.0,
+          "ma": 3076.6,
+          "ma_prev": 3072.7
+        },
+        "daily": {
+          "close": 3126.0,
+          "ma": 3139.2,
+          "ma_prev": 3140.8
+        },
+        "side": "flat"
+      },
+      "hold_change": -21800.0,
+      "quadrant": "价涨仓减",
+      "mult": 10.0,
+      "margin_rate": 11.0,
+      "margin": 3438.6,
+      "stop_distance": 58.5,
+      "stop_px": null,
+      "notes": [],
+      "lots": 15,
+      "risk_lots": 85,
+      "exposure_lots": 15,
+      "binding": "exposure",
+      "risk_per_lot": 585.0,
+      "notional_per_lot": 31260.0
+    },
+    {
+      "symbol": "HC0",
+      "name": "热卷",
+      "sector": "黑色",
+      "date": "2026-09-16",
+      "last": 3323.0,
+      "chg": 0.0036242826940502404,
+      "atr": 33.07142857142857,
+      "side": "flat",
+      "side_prev": "flat",
+      "evidence": {
+        "includes_partial_periods": true,
+        "monthly": {
+          "close": 3323.0,
+          "ma": 3314.3,
+          "ma_prev": 3312.2
+        },
+        "weekly": {
+          "close": 3323.0,
+          "ma": 3302.5,
+          "ma_prev": 3299.3
+        },
+        "daily": {
+          "close": 3323.0,
+          "ma": 3352.7,
+          "ma_prev": 3356.9
+        },
+        "side": "flat"
+      },
+      "hold_change": -5338.0,
+      "quadrant": "价涨仓减",
+      "mult": 10.0,
+      "margin_rate": 11.0,
+      "margin": 3655.3,
+      "stop_distance": 49.607142857142854,
+      "stop_px": null,
+      "notes": [],
+      "lots": 15,
+      "risk_lots": 100,
+      "exposure_lots": 15,
+      "binding": "exposure",
+      "risk_per_lot": 496.07142857142856,
+      "notional_per_lot": 33230.0
+    },
+    {
+      "symbol": "SS0",
+      "name": "不锈钢",
+      "sector": "有色",
+      "date": "2026-09-16",
+      "last": 13540.0,
+      "chg": -0.00036913990402365204,
+      "atr": 170.71428571428572,
+      "side": "short",
+      "side_prev": "short",
+      "evidence": {
+        "includes_partial_periods": true,
+        "monthly": {
+          "close": 13540.0,
+          "ma": 14274.0,
+          "ma_prev": 14156.5
+        },
+        "weekly": {
+          "close": 13540.0,
+          "ma": 14201.0,
+          "ma_prev": 14276.0
+        },
+        "daily": {
+          "close": 13540.0,
+          "ma": 13717.5,
+          "ma_prev": 13740.0
+        },
+        "side": "short"
+      },
+      "hold_change": 13112.0,
+      "quadrant": "价跌仓增",
+      "mult": 5.0,
+      "margin_rate": 11.0,
+      "margin": 7447.0,
+      "stop_distance": 256.07142857142856,
+      "stop_px": 13796.07142857143,
+      "notes": [],
+      "lots": 7,
+      "risk_lots": 39,
+      "exposure_lots": 7,
+      "binding": "exposure",
+      "risk_per_lot": 1280.3571428571427,
+      "notional_per_lot": 67700.0
+    },
+    {
+      "symbol": "FU0",
+      "name": "燃料油",
+      "sector": "能化",
+      "date": "2026-09-16",
+      "last": 4488.0,
+      "chg": 0.0013386880856760541,
+      "atr": 217.71428571428572,
+      "side": "long",
+      "side_prev": "long",
+      "evidence": {
+        "includes_partial_periods": true,
+        "monthly": {
+          "close": 4488.0,
+          "ma": 3572.4,
+          "ma_prev": 3373.7
+        },
+        "weekly": {
+          "close": 4488.0,
+          "ma": 3797.7,
+          "ma_prev": 3661.9
+        },
+        "daily": {
+          "close": 4488.0,
+          "ma": 4121.0,
+          "ma_prev": 4069.2
+        },
+        "side": "long"
+      },
+      "hold_change": 2116.0,
+      "quadrant": "价涨仓增",
+      "mult": 10.0,
+      "margin_rate": 29.0,
+      "margin": 13015.2,
+      "stop_distance": 326.57142857142856,
+      "stop_px": 4161.428571428572,
+      "notes": [],
+      "lots": 11,
+      "risk_lots": 15,
+      "exposure_lots": 11,
+      "binding": "exposure",
+      "risk_per_lot": 3265.7142857142853,
+      "notional_per_lot": 44880.0
+    },
+    {
+      "symbol": "BU0",
+      "name": "沥青",
+      "sector": "能化",
+      "date": "2026-09-16",
+      "last": 5450.0,
+      "chg": 0.032392498579276285,
+      "atr": 206.0,
+      "side": "long",
+      "side_prev": "long",
+      "evidence": {
+        "includes_partial_periods": true,
+        "monthly": {
+          "close": 5450.0,
+          "ma": 4116.1,
+          "ma_prev": 3870.7
+        },
+        "weekly": {
+          "close": 5450.0,
+          "ma": 4521.5,
+          "ma_prev": 4354.8
+        },
+        "daily": {
+          "close": 5450.0,
+          "ma": 5078.4,
+          "ma_prev": 5030.8
+        },
+        "side": "long"
+      },
+      "hold_change": 7942.0,
+      "quadrant": "价涨仓增",
+      "mult": 10.0,
+      "margin_rate": 22.0,
+      "margin": 11990.0,
+      "stop_distance": 309.0,
+      "stop_px": 5141.0,
+      "notes": [],
+      "lots": 9,
+      "risk_lots": 16,
+      "exposure_lots": 9,
+      "binding": "exposure",
+      "risk_per_lot": 3090.0,
+      "notional_per_lot": 54500.0
+    },
+    {
+      "symbol": "RU0",
+      "name": "橡胶",
+      "sector": "能化",
+      "date": "2026-09-16",
+      "last": 18875.0,
+      "chg": 0.005326231691078487,
+      "atr": 391.7857142857143,
+      "side": "flat",
+      "side_prev": "flat",
+      "evidence": {
+        "includes_partial_periods": true,
+        "monthly": {
+          "close": 18875.0,
+          "ma": 17192.5,
+          "ma_prev": 16846.0
+        },
+        "weekly": {
+          "close": 18875.0,
+          "ma": 17990.5,
+          "ma_prev": 17793.5
+        },
+        "daily": {
+          "close": 18875.0,
+          "ma": 19126.0,
+          "ma_prev": 19104.0
+        },
+        "side": "flat"
+      },
+      "hold_change": -3983.0,
+      "quadrant": "价涨仓减",
+      "mult": 10.0,
+      "margin_rate": 15.0,
+      "margin": 28312.5,
+      "stop_distance": 587.6785714285714,
+      "stop_px": null,
+      "notes": [],
+      "lots": 2,
+      "risk_lots": 8,
+      "exposure_lots": 2,
+      "binding": "exposure",
+      "risk_per_lot": 5876.785714285715,
+      "notional_per_lot": 188750.0
+    },
+    {
+      "symbol": "SC0",
+      "name": "原油",
+      "sector": "能化",
+      "date": "2026-09-16",
+      "last": 827.0,
+      "chg": -0.011002152595072978,
+      "atr": 51.607142857142854,
+      "side": "long",
+      "side_prev": "long",
+      "evidence": {
+        "includes_partial_periods": true,
+        "monthly": {
+          "close": 827.0,
+          "ma": 587.05,
+          "ma_prev": 549.74
+        },
+        "weekly": {
+          "close": 827.0,
+          "ma": 624.81,
+          "ma_prev": 589.2299999999999
+        },
+        "daily": {
+          "close": 827.0,
+          "ma": 768.05,
+          "ma_prev": 754.6800000000001
+        },
+        "side": "long"
+      },
+      "hold_change": 1730.0,
+      "quadrant": "价跌仓增",
+      "mult": 1000.0,
+      "margin_rate": 29.0,
+      "margin": 239830.0,
+      "stop_distance": 77.41071428571428,
+      "stop_px": 749.5892857142858,
+      "notes": [],
+      "lots": 0,
+      "risk_lots": 0,
+      "exposure_lots": 0,
+      "binding": "both",
+      "risk_per_lot": 77410.71428571428,
+      "notional_per_lot": 827000.0
+    },
+    {
+      "symbol": "LU0",
+      "name": "低硫燃油",
+      "sector": "能化",
+      "date": "2026-09-16",
+      "last": 5673.0,
+      "chg": 0.008712660028449504,
+      "atr": 273.85714285714283,
+      "side": "long",
+      "side_prev": "long",
+      "evidence": {
+        "includes_partial_periods": true,
+        "monthly": {
+          "close": 5673.0,
+          "ma": 4386.7,
+          "ma_prev": 4123.2
+        },
+        "weekly": {
+          "close": 5673.0,
+          "ma": 4937.5,
+          "ma_prev": 4773.4
+        },
+        "daily": {
+          "close": 5673.0,
+          "ma": 5287.3,
+          "ma_prev": 5223.7
+        },
+        "side": "long"
+      },
+      "hold_change": 625.0,
+      "quadrant": "价涨仓增",
+      "mult": 10.0,
+      "margin_rate": 29.0,
+      "margin": 16451.7,
+      "stop_distance": 410.7857142857142,
+      "stop_px": 5262.214285714286,
+      "notes": [],
+      "lots": 8,
+      "risk_lots": 12,
+      "exposure_lots": 8,
+      "binding": "exposure",
+      "risk_per_lot": 4107.857142857142,
+      "notional_per_lot": 56730.0
+    },
+    {
+      "symbol": "NR0",
+      "name": "20号胶",
+      "sector": "能化",
+      "date": "2026-09-16",
+      "last": 16010.0,
+      "chg": 0.007551919446192601,
+      "atr": 417.85714285714283,
+      "side": "flat",
+      "side_prev": "flat",
+      "evidence": {
+        "includes_partial_periods": true,
+        "monthly": {
+          "close": 16010.0,
+          "ma": 14400.0,
+          "ma_prev": 14026.5
+        },
+        "weekly": {
+          "close": 16010.0,
+          "ma": 15261.0,
+          "ma_prev": 15133.5
+        },
+        "daily": {
+          "close": 16010.0,
+          "ma": 16262.5,
+          "ma_prev": 16242.5
+        },
+        "side": "flat"
+      },
+      "hold_change": -3720.0,
+      "quadrant": "价涨仓减",
+      "mult": 10.0,
+      "margin_rate": 15.0,
+      "margin": 24015.0,
+      "stop_distance": 626.7857142857142,
+      "stop_px": null,
+      "notes": [],
+      "lots": 3,
+      "risk_lots": 7,
+      "exposure_lots": 3,
+      "binding": "exposure",
+      "risk_per_lot": 6267.857142857142,
+      "notional_per_lot": 160100.0
+    },
+    {
+      "symbol": "BC0",
+      "name": "国际铜",
+      "sector": "有色",
+      "date": "2026-09-16",
+      "last": 95730.0,
+      "chg": 0.007366094917394594,
+      "atr": 1407.857142857143,
+      "side": "flat",
+      "side_prev": "flat",
+      "evidence": {
+        "includes_partial_periods": true,
+        "monthly": {
+          "close": 95730.0,
+          "ma": 91795.0,
+          "ma_prev": 90028.0
+        },
+        "weekly": {
+          "close": 95730.0,
+          "ma": 95541.0,
+          "ma_prev": 95174.0
+        },
+        "daily": {
+          "close": 95730.0,
+          "ma": 97374.0,
+          "ma_prev": 97422.0
+        },
+        "side": "flat"
+      },
+      "hold_change": -435.0,
+      "quadrant": "价涨仓减",
+      "mult": 5.0,
+      "margin_rate": 16.0,
+      "margin": 76584.0,
+      "stop_distance": 2111.785714285714,
+      "stop_px": null,
+      "notes": [],
+      "lots": 1,
+      "risk_lots": 4,
+      "exposure_lots": 1,
+      "binding": "exposure",
+      "risk_per_lot": 10558.92857142857,
+      "notional_per_lot": 478650.0
+    },
+    {
+      "symbol": "M0",
+      "name": "豆粕",
+      "sector": "农产品",
+      "date": "2026-09-16",
+      "last": 3479.0,
+      "chg": 0.03112033195020736,
+      "atr": 59.92857142857143,
+      "side": "long",
+      "side_prev": "flat",
+      "evidence": {
+        "includes_partial_periods": true,
+        "monthly": {
+          "close": 3479.0,
+          "ma": 3011.9,
+          "ma_prev": 2948.5
+        },
+        "weekly": {
+          "close": 3479.0,
+          "ma": 3254.8,
+          "ma_prev": 3211.8
+        },
+        "daily": {
+          "close": 3479.0,
+          "ma": 3408.2,
+          "ma_prev": 3396.4
+        },
+        "side": "long"
+      },
+      "hold_change": 174210.0,
+      "quadrant": "价涨仓增",
+      "mult": 10.0,
+      "margin_rate": 13.0,
+      "margin": 4522.7,
+      "stop_distance": 89.89285714285714,
+      "stop_px": 3389.1071428571427,
+      "notes": [],
+      "lots": 14,
+      "risk_lots": 55,
+      "exposure_lots": 14,
+      "binding": "exposure",
+      "risk_per_lot": 898.9285714285713,
+      "notional_per_lot": 34790.0
+    },
+    {
+      "symbol": "Y0",
+      "name": "豆油",
+      "sector": "农产品",
+      "date": "2026-09-16",
+      "last": 9036.0,
+      "chg": 0.008482142857142883,
+      "atr": 155.85714285714286,
+      "side": "flat",
+      "side_prev": "flat",
+      "evidence": {
+        "includes_partial_periods": true,
+        "monthly": {
+          "close": 9036.0,
+          "ma": 8513.0,
+          "ma_prev": 8413.4
+        },
+        "weekly": {
+          "close": 9036.0,
+          "ma": 8756.1,
+          "ma_prev": 8706.8
+        },
+        "daily": {
+          "close": 9036.0,
+          "ma": 9085.0,
+          "ma_prev": 9092.7
+        },
+        "side": "flat"
+      },
+      "hold_change": 9222.0,
+      "quadrant": "价涨仓增",
+      "mult": 10.0,
+      "margin_rate": 13.0,
+      "margin": 11746.8,
+      "stop_distance": 233.78571428571428,
+      "stop_px": null,
+      "notes": [],
+      "lots": 5,
+      "risk_lots": 21,
+      "exposure_lots": 5,
+      "binding": "exposure",
+      "risk_per_lot": 2337.8571428571427,
+      "notional_per_lot": 90360.0
+    },
+    {
+      "symbol": "P0",
+      "name": "棕榈油",
+      "sector": "农产品",
+      "date": "2026-09-16",
+      "last": 10095.0,
+      "chg": 0.006380221313926793,
+      "atr": 201.64285714285714,
+      "side": "flat",
+      "side_prev": "flat",
+      "evidence": {
+        "includes_partial_periods": true,
+        "monthly": {
+          "close": 10095.0,
+          "ma": 9481.4,
+          "ma_prev": 9334.5
+        },
+        "weekly": {
+          "close": 10095.0,
+          "ma": 9827.4,
+          "ma_prev": 9740.1
+        },
+        "daily": {
+          "close": 10095.0,
+          "ma": 10182.5,
+          "ma_prev": 10191.6
+        },
+        "side": "flat"
+      },
+      "hold_change": -3647.0,
+      "quadrant": "价涨仓减",
+      "mult": 10.0,
+      "margin_rate": 14.0,
+      "margin": 14133.0,
+      "stop_distance": 302.4642857142857,
+      "stop_px": null,
+      "notes": [],
+      "lots": 4,
+      "risk_lots": 16,
+      "exposure_lots": 4,
+      "binding": "exposure",
+      "risk_per_lot": 3024.6428571428573,
+      "notional_per_lot": 100950.0
+    },
+    {
+      "symbol": "A0",
+      "name": "豆一",
+      "sector": "农产品",
+      "date": "2026-09-16",
+      "last": 5050.0,
+      "chg": 0.001785360047609652,
+      "atr": 87.85714285714286,
+      "side": "flat",
+      "side_prev": "flat",
+      "evidence": {
+        "includes_partial_periods": true,
+        "monthly": {
+          "close": 5050.0,
+          "ma": 4712.1,
+          "ma_prev": 4617.9
+        },
+        "weekly": {
+          "close": 5050.0,
+          "ma": 4910.1,
+          "ma_prev": 4879.8
+        },
+        "daily": {
+          "close": 5050.0,
+          "ma": 5060.9,
+          "ma_prev": 5053.1
+        },
+        "side": "flat"
+      },
+      "hold_change": -2260.0,
+      "quadrant": "价涨仓减",
+      "mult": 10.0,
+      "margin_rate": 12.0,
+      "margin": 6060.0,
+      "stop_distance": 131.78571428571428,
+      "stop_px": null,
+      "notes": [],
+      "lots": 9,
+      "risk_lots": 37,
+      "exposure_lots": 9,
+      "binding": "exposure",
+      "risk_per_lot": 1317.8571428571427,
+      "notional_per_lot": 50500.0
+    },
+    {
+      "symbol": "C0",
+      "name": "玉米",
+      "sector": "农产品",
+      "date": "2026-09-16",
+      "last": 2216.0,
+      "chg": 0.001808318264014508,
+      "atr": 21.357142857142858,
+      "side": "short",
+      "side_prev": "short",
+      "evidence": {
+        "includes_partial_periods": true,
+        "monthly": {
+          "close": 2216.0,
+          "ma": 2306.9,
+          "ma_prev": 2309.7
+        },
+        "weekly": {
+          "close": 2216.0,
+          "ma": 2262.1,
+          "ma_prev": 2271.6
+        },
+        "daily": {
+          "close": 2216.0,
+          "ma": 2263.9,
+          "ma_prev": 2271.2
+        },
+        "side": "short"
+      },
+      "hold_change": -8896.0,
+      "quadrant": "价涨仓减",
+      "mult": 10.0,
+      "margin_rate": 10.0,
+      "margin": 2216.0,
+      "stop_distance": 32.035714285714285,
+      "stop_px": 2248.035714285714,
+      "notes": [],
+      "lots": 22,
+      "risk_lots": 156,
+      "exposure_lots": 22,
+      "binding": "exposure",
+      "risk_per_lot": 320.35714285714283,
+      "notional_per_lot": 22160.0
+    },
+    {
+      "symbol": "CS0",
+      "name": "玉米淀粉",
+      "sector": "农产品",
+      "date": "2026-09-16",
+      "last": 2460.0,
+      "chg": 0.0024449877750611915,
+      "atr": 28.142857142857142,
+      "side": "short",
+      "side_prev": "short",
+      "evidence": {
+        "includes_partial_periods": true,
+        "monthly": {
+          "close": 2460.0,
+          "ma": 2634.5,
+          "ma_prev": 2645.1
+        },
+        "weekly": {
+          "close": 2460.0,
+          "ma": 2573.5,
+          "ma_prev": 2596.8
+        },
+        "daily": {
+          "close": 2460.0,
+          "ma": 2521.6,
+          "ma_prev": 2532.5
+        },
+        "side": "short"
+      },
+      "hold_change": -4348.0,
+      "quadrant": "价涨仓减",
+      "mult": 10.0,
+      "margin_rate": 11.0,
+      "margin": 2706.0,
+      "stop_distance": 42.214285714285715,
+      "stop_px": 2502.214285714286,
+      "notes": [],
+      "lots": 20,
+      "risk_lots": 118,
+      "exposure_lots": 20,
+      "binding": "exposure",
+      "risk_per_lot": 422.14285714285717,
+      "notional_per_lot": 24600.0
+    },
+    {
+      "symbol": "JD0",
+      "name": "鸡蛋",
+      "sector": "农产品",
+      "date": "2026-09-16",
+      "last": 3798.0,
+      "chg": 0.0,
+      "atr": 64.92857142857143,
+      "side": "flat",
+      "side_prev": "flat",
+      "evidence": {
+        "includes_partial_periods": true,
+        "monthly": {
+          "close": 3798.0,
+          "ma": 3678.4,
+          "ma_prev": 3627.9
+        },
+        "weekly": {
+          "close": 3798.0,
+          "ma": 3922.3,
+          "ma_prev": 4006.3
+        },
+        "daily": {
+          "close": 3798.0,
+          "ma": 3800.5,
+          "ma_prev": 3786.2
+        },
+        "side": "flat"
+      },
+      "hold_change": -10336.0,
+      "quadrant": "价格持平",
+      "mult": 10.0,
+      "margin_rate": 13.0,
+      "margin": 4937.4,
+      "stop_distance": 97.39285714285714,
+      "stop_px": null,
+      "notes": [],
+      "lots": 13,
+      "risk_lots": 51,
+      "exposure_lots": 13,
+      "binding": "exposure",
+      "risk_per_lot": 973.9285714285713,
+      "notional_per_lot": 37980.0
+    },
+    {
+      "symbol": "I0",
+      "name": "铁矿石",
+      "sector": "黑色",
+      "date": "2026-09-16",
+      "last": 709.0,
+      "chg": 0.0014124293785311437,
+      "atr": 11.75,
+      "side": "short",
+      "side_prev": "short",
+      "evidence": {
+        "includes_partial_periods": true,
+        "monthly": {
+          "close": 709.0,
+          "ma": 761.8,
+          "ma_prev": 770.3
+        },
+        "weekly": {
+          "close": 709.0,
+          "ma": 723.55,
+          "ma_prev": 727.8
+        },
+        "daily": {
+          "close": 709.0,
+          "ma": 724.4,
+          "ma_prev": 724.9
+        },
+        "side": "short"
+      },
+      "hold_change": 5352.0,
+      "quadrant": "价涨仓增",
+      "mult": 100.0,
+      "margin_rate": 14.0,
+      "margin": 9926.0,
+      "stop_distance": 17.625,
+      "stop_px": 726.625,
+      "notes": [],
+      "lots": 7,
+      "risk_lots": 28,
+      "exposure_lots": 7,
+      "binding": "exposure",
+      "risk_per_lot": 1762.5,
+      "notional_per_lot": 70900.0
+    },
+    {
+      "symbol": "J0",
+      "name": "焦炭",
+      "sector": "黑色",
+      "date": "2026-09-16",
+      "last": 2062.0,
+      "chg": -0.00506634499396863,
+      "atr": 70.5,
+      "side": "flat",
+      "side_prev": "flat",
+      "evidence": {
+        "includes_partial_periods": true,
+        "monthly": {
+          "close": 2062.0,
+          "ma": 1852.45,
+          "ma_prev": 1803.7
+        },
+        "weekly": {
+          "close": 2062.0,
+          "ma": 1982.0,
+          "ma_prev": 1967.1
+        },
+        "daily": {
+          "close": 2062.0,
+          "ma": 2116.15,
+          "ma_prev": 2128.1
+        },
+        "side": "flat"
+      },
+      "hold_change": -873.0,
+      "quadrant": "价跌仓减",
+      "mult": 100.0,
+      "margin_rate": 18.0,
+      "margin": 37116.0,
+      "stop_distance": 105.75,
+      "stop_px": null,
+      "notes": [],
+      "lots": 2,
+      "risk_lots": 4,
+      "exposure_lots": 2,
+      "binding": "exposure",
+      "risk_per_lot": 10575.0,
+      "notional_per_lot": 206200.0
+    },
+    {
+      "symbol": "JM0",
+      "name": "焦煤",
+      "sector": "黑色",
+      "date": "2026-09-16",
+      "last": 1616.0,
+      "chg": -0.0006184291898577721,
+      "atr": 68.64285714285714,
+      "side": "flat",
+      "side_prev": "flat",
+      "evidence": {
+        "includes_partial_periods": true,
+        "monthly": {
+          "close": 1616.0,
+          "ma": 1289.15,
+          "ma_prev": 1234.25
+        },
+        "weekly": {
+          "close": 1616.0,
+          "ma": 1458.7,
+          "ma_prev": 1422.85
+        },
+        "daily": {
+          "close": 1616.0,
+          "ma": 1631.3,
+          "ma_prev": 1636.05
+        },
+        "side": "flat"
+      },
+      "hold_change": 14364.0,
+      "quadrant": "价跌仓增",
+      "mult": 60.0,
+      "margin_rate": 20.0,
+      "margin": 19392.0,
+      "stop_distance": 102.96428571428571,
+      "stop_px": null,
+      "notes": [],
+      "lots": 5,
+      "risk_lots": 8,
+      "exposure_lots": 5,
+      "binding": "exposure",
+      "risk_per_lot": 6177.857142857142,
+      "notional_per_lot": 96960.0
+    },
+    {
+      "symbol": "L0",
+      "name": "塑料",
+      "sector": "能化",
+      "date": "2026-09-16",
+      "last": 8587.0,
+      "chg": 0.0022175536881419156,
+      "atr": 247.57142857142858,
+      "side": "long",
+      "side_prev": "long",
+      "evidence": {
+        "includes_partial_periods": true,
+        "monthly": {
+          "close": 8587.0,
+          "ma": 7638.1,
+          "ma_prev": 7458.3
+        },
+        "weekly": {
+          "close": 8587.0,
+          "ma": 8014.9,
+          "ma_prev": 7875.8
+        },
+        "daily": {
+          "close": 8587.0,
+          "ma": 8478.0,
+          "ma_prev": 8447.2
+        },
+        "side": "long"
+      },
+      "hold_change": 9133.0,
+      "quadrant": "价涨仓增",
+      "mult": 5.0,
+      "margin_rate": 15.0,
+      "margin": 6440.25,
+      "stop_distance": 371.3571428571429,
+      "stop_px": 8215.642857142857,
+      "notes": [],
+      "lots": 11,
+      "risk_lots": 26,
+      "exposure_lots": 11,
+      "binding": "exposure",
+      "risk_per_lot": 1856.7857142857144,
+      "notional_per_lot": 42935.0
+    },
+    {
+      "symbol": "PP0",
+      "name": "聚丙烯",
+      "sector": "能化",
+      "date": "2026-09-16",
+      "last": 8989.0,
+      "chg": 0.009659665281365859,
+      "atr": 271.64285714285717,
+      "side": "long",
+      "side_prev": "long",
+      "evidence": {
+        "includes_partial_periods": true,
+        "monthly": {
+          "close": 8989.0,
+          "ma": 7915.7,
+          "ma_prev": 7657.7
+        },
+        "weekly": {
+          "close": 8989.0,
+          "ma": 8399.4,
+          "ma_prev": 8259.0
+        },
+        "daily": {
+          "close": 8989.0,
+          "ma": 8772.1,
+          "ma_prev": 8726.8
+        },
+        "side": "long"
+      },
+      "hold_change": 16652.0,
+      "quadrant": "价涨仓增",
+      "mult": 5.0,
+      "margin_rate": 15.0,
+      "margin": 6741.75,
+      "stop_distance": 407.4642857142858,
+      "stop_px": 8581.535714285714,
+      "notes": [],
+      "lots": 11,
+      "risk_lots": 24,
+      "exposure_lots": 11,
+      "binding": "exposure",
+      "risk_per_lot": 2037.321428571429,
+      "notional_per_lot": 44945.0
+    },
+    {
+      "symbol": "V0",
+      "name": "PVC",
+      "sector": "能化",
+      "date": "2026-09-16",
+      "last": 4887.0,
+      "chg": -0.010328068043742422,
+      "atr": 161.07142857142858,
+      "side": "flat",
+      "side_prev": "flat",
+      "evidence": {
+        "includes_partial_periods": true,
+        "monthly": {
+          "close": 4887.0,
+          "ma": 4882.3,
+          "ma_prev": 4848.5
+        },
+        "weekly": {
+          "close": 4887.0,
+          "ma": 4687.9,
+          "ma_prev": 4652.6
+        },
+        "daily": {
+          "close": 4887.0,
+          "ma": 5006.0,
+          "ma_prev": 5007.9
+        },
+        "side": "flat"
+      },
+      "hold_change": -5005.0,
+      "quadrant": "价跌仓减",
+      "mult": 5.0,
+      "margin_rate": 15.0,
+      "margin": 3665.25,
+      "stop_distance": 241.6071428571429,
+      "stop_px": null,
+      "notes": [],
+      "lots": 20,
+      "risk_lots": 41,
+      "exposure_lots": 20,
+      "binding": "exposure",
+      "risk_per_lot": 1208.0357142857144,
+      "notional_per_lot": 24435.0
+    },
+    {
+      "symbol": "EG0",
+      "name": "乙二醇",
+      "sector": "能化",
+      "date": "2026-09-16",
+      "last": 6147.0,
+      "chg": 0.031722054380664666,
+      "atr": 298.0,
+      "side": "long",
+      "side_prev": "long",
+      "evidence": {
+        "includes_partial_periods": true,
+        "monthly": {
+          "close": 6147.0,
+          "ma": 4669.0,
+          "ma_prev": 4442.8
+        },
+        "weekly": {
+          "close": 6147.0,
+          "ma": 5242.4,
+          "ma_prev": 5047.9
+        },
+        "daily": {
+          "close": 6147.0,
+          "ma": 5895.8,
+          "ma_prev": 5862.0
+        },
+        "side": "long"
+      },
+      "hold_change": -33403.0,
+      "quadrant": "价涨仓减",
+      "mult": 10.0,
+      "margin_rate": 16.0,
+      "margin": 9835.2,
+      "stop_distance": 447.0,
+      "stop_px": 5700.0,
+      "notes": [],
+      "lots": 8,
+      "risk_lots": 11,
+      "exposure_lots": 8,
+      "binding": "exposure",
+      "risk_per_lot": 4470.0,
+      "notional_per_lot": 61470.0
+    },
+    {
+      "symbol": "EB0",
+      "name": "苯乙烯",
+      "sector": "能化",
+      "date": "2026-09-16",
+      "last": 9961.0,
+      "chg": -0.020743216673220655,
+      "atr": 393.42857142857144,
+      "side": "long",
+      "side_prev": "long",
+      "evidence": {
+        "includes_partial_periods": true,
+        "monthly": {
+          "close": 9961.0,
+          "ma": 8613.3,
+          "ma_prev": 8273.8
+        },
+        "weekly": {
+          "close": 9961.0,
+          "ma": 8951.0,
+          "ma_prev": 8732.5
+        },
+        "daily": {
+          "close": 9961.0,
+          "ma": 9920.4,
+          "ma_prev": 9869.3
+        },
+        "side": "long"
+      },
+      "hold_change": 43512.0,
+      "quadrant": "价跌仓增",
+      "mult": 5.0,
+      "margin_rate": 16.0,
+      "margin": 7968.8,
+      "stop_distance": 590.1428571428571,
+      "stop_px": 9370.857142857143,
+      "notes": [],
+      "lots": 10,
+      "risk_lots": 16,
+      "exposure_lots": 10,
+      "binding": "exposure",
+      "risk_per_lot": 2950.7142857142853,
+      "notional_per_lot": 49805.0
+    },
+    {
+      "symbol": "PG0",
+      "name": "液化气",
+      "sector": "能化",
+      "date": "2026-09-16",
+      "last": 6981.0,
+      "chg": 0.01763848396501455,
+      "atr": 298.85714285714283,
+      "side": "long",
+      "side_prev": "long",
+      "evidence": {
+        "includes_partial_periods": true,
+        "monthly": {
+          "close": 6981.0,
+          "ma": 5385.9,
+          "ma_prev": 5129.0
+        },
+        "weekly": {
+          "close": 6981.0,
+          "ma": 5898.4,
+          "ma_prev": 5674.9
+        },
+        "daily": {
+          "close": 6981.0,
+          "ma": 6778.8,
+          "ma_prev": 6714.7
+        },
+        "side": "long"
+      },
+      "hold_change": 5973.0,
+      "quadrant": "价涨仓增",
+      "mult": 20.0,
+      "margin_rate": 16.0,
+      "margin": 22339.2,
+      "stop_distance": 448.2857142857142,
+      "stop_px": 6532.714285714286,
+      "notes": [],
+      "lots": 3,
+      "risk_lots": 5,
+      "exposure_lots": 3,
+      "binding": "exposure",
+      "risk_per_lot": 8965.714285714284,
+      "notional_per_lot": 139620.0
+    },
+    {
+      "symbol": "LH0",
+      "name": "生猪",
+      "sector": "农产品",
+      "date": "2026-09-16",
+      "last": 11130.0,
+      "chg": -0.017218543046357615,
+      "atr": 212.14285714285714,
+      "side": "short",
+      "side_prev": "short",
+      "evidence": {
+        "includes_partial_periods": true,
+        "monthly": {
+          "close": 11130.0,
+          "ma": 11418.5,
+          "ma_prev": 11430.5
+        },
+        "weekly": {
+          "close": 11130.0,
+          "ma": 11647.5,
+          "ma_prev": 11779.5
+        },
+        "daily": {
+          "close": 11130.0,
+          "ma": 11579.5,
+          "ma_prev": 11640.5
+        },
+        "side": "short"
+      },
+      "hold_change": -639.0,
+      "quadrant": "价跌仓减",
+      "mult": 16.0,
+      "margin_rate": 11.0,
+      "margin": 19588.8,
+      "stop_distance": 318.2142857142857,
+      "stop_px": 11448.214285714286,
+      "notes": [],
+      "lots": 2,
+      "risk_lots": 9,
+      "exposure_lots": 2,
+      "binding": "exposure",
+      "risk_per_lot": 5091.428571428572,
+      "notional_per_lot": 178080.0
+    },
+    {
+      "symbol": "SR0",
+      "name": "白糖",
+      "sector": "农产品",
+      "date": "2026-09-16",
+      "last": 5369.0,
+      "chg": 0.0,
+      "atr": 55.142857142857146,
+      "side": "flat",
+      "side_prev": "flat",
+      "evidence": {
+        "includes_partial_periods": true,
+        "monthly": {
+          "close": 5369.0,
+          "ma": 5315.6,
+          "ma_prev": 5318.7
+        },
+        "weekly": {
+          "close": 5369.0,
+          "ma": 5283.8,
+          "ma_prev": 5275.3
+        },
+        "daily": {
+          "close": 5369.0,
+          "ma": 5431.4,
+          "ma_prev": 5432.6
+        },
+        "side": "flat"
+      },
+      "hold_change": 19944.0,
+      "quadrant": "价格持平",
+      "mult": 10.0,
+      "margin_rate": 11.0,
+      "margin": 5905.9,
+      "stop_distance": 82.71428571428572,
+      "stop_px": null,
+      "notes": [],
+      "lots": 9,
+      "risk_lots": 60,
+      "exposure_lots": 9,
+      "binding": "exposure",
+      "risk_per_lot": 827.1428571428572,
+      "notional_per_lot": 53690.0
+    },
+    {
+      "symbol": "CF0",
+      "name": "棉花",
+      "sector": "农产品",
+      "date": "2026-09-16",
+      "last": 16040.0,
+      "chg": -0.004345127250155234,
+      "atr": 223.57142857142858,
+      "side": "flat",
+      "side_prev": "flat",
+      "evidence": {
+        "includes_partial_periods": true,
+        "monthly": {
+          "close": 16040.0,
+          "ma": 15759.0,
+          "ma_prev": 15527.5
+        },
+        "weekly": {
+          "close": 16040.0,
+          "ma": 16390.5,
+          "ma_prev": 16399.0
+        },
+        "daily": {
+          "close": 16040.0,
+          "ma": 16517.0,
+          "ma_prev": 16600.0
+        },
+        "side": "flat"
+      },
+      "hold_change": 2106.0,
+      "quadrant": "价跌仓增",
+      "mult": 5.0,
+      "margin_rate": 13.0,
+      "margin": 10426.0,
+      "stop_distance": 335.3571428571429,
+      "stop_px": null,
+      "notes": [],
+      "lots": 6,
+      "risk_lots": 29,
+      "exposure_lots": 6,
+      "binding": "exposure",
+      "risk_per_lot": 1676.7857142857144,
+      "notional_per_lot": 80200.0
+    },
+    {
+      "symbol": "TA0",
+      "name": "PTA",
+      "sector": "能化",
+      "date": "2026-09-16",
+      "last": 6556.0,
+      "chg": 0.01864512119328765,
+      "atr": 210.14285714285714,
+      "side": "long",
+      "side_prev": "long",
+      "evidence": {
+        "includes_partial_periods": true,
+        "monthly": {
+          "close": 6556.0,
+          "ma": 5885.8,
+          "ma_prev": 5700.2
+        },
+        "weekly": {
+          "close": 6556.0,
+          "ma": 5899.8,
+          "ma_prev": 5800.2
+        },
+        "daily": {
+          "close": 6556.0,
+          "ma": 6203.8,
+          "ma_prev": 6149.2
+        },
+        "side": "long"
+      },
+      "hold_change": 3804.0,
+      "quadrant": "价涨仓增",
+      "mult": 5.0,
+      "margin_rate": 15.0,
+      "margin": 4917.0,
+      "stop_distance": 315.2142857142857,
+      "stop_px": 6240.785714285715,
+      "notes": [],
+      "lots": 15,
+      "risk_lots": 31,
+      "exposure_lots": 15,
+      "binding": "exposure",
+      "risk_per_lot": 1576.0714285714287,
+      "notional_per_lot": 32780.0
+    },
+    {
+      "symbol": "MA0",
+      "name": "甲醇",
+      "sector": "能化",
+      "date": "2026-09-16",
+      "last": 3052.0,
+      "chg": 0.0092592592592593,
+      "atr": 150.14285714285714,
+      "side": "flat",
+      "side_prev": "flat",
+      "evidence": {
+        "includes_partial_periods": true,
+        "monthly": {
+          "close": 3052.0,
+          "ma": 2682.7,
+          "ma_prev": 2591.0
+        },
+        "weekly": {
+          "close": 3052.0,
+          "ma": 2818.2,
+          "ma_prev": 2761.0
+        },
+        "daily": {
+          "close": 3052.0,
+          "ma": 3184.5,
+          "ma_prev": 3197.6
+        },
+        "side": "flat"
+      },
+      "hold_change": 40520.0,
+      "quadrant": "价涨仓增",
+      "mult": 10.0,
+      "margin_rate": 15.0,
+      "margin": 4578.0,
+      "stop_distance": 225.21428571428572,
+      "stop_px": null,
+      "notes": [],
+      "lots": 16,
+      "risk_lots": 22,
+      "exposure_lots": 16,
+      "binding": "exposure",
+      "risk_per_lot": 2252.1428571428573,
+      "notional_per_lot": 30520.0
+    },
+    {
+      "symbol": "OI0",
+      "name": "菜油",
+      "sector": "农产品",
+      "date": "2026-09-16",
+      "last": 10193.0,
+      "chg": 0.00910800910800913,
+      "atr": 181.78571428571428,
+      "side": "flat",
+      "side_prev": "flat",
+      "evidence": {
+        "includes_partial_periods": true,
+        "monthly": {
+          "close": 10193.0,
+          "ma": 9748.9,
+          "ma_prev": 9705.3
+        },
+        "weekly": {
+          "close": 10193.0,
+          "ma": 10205.0,
+          "ma_prev": 10176.5
+        },
+        "daily": {
+          "close": 10193.0,
+          "ma": 10223.4,
+          "ma_prev": 10235.2
+        },
+        "side": "flat"
+      },
+      "hold_change": -48.0,
+      "quadrant": "价涨仓减",
+      "mult": 10.0,
+      "margin_rate": 13.0,
+      "margin": 13250.9,
+      "stop_distance": 272.67857142857144,
+      "stop_px": null,
+      "notes": [],
+      "lots": 4,
+      "risk_lots": 18,
+      "exposure_lots": 4,
+      "binding": "exposure",
+      "risk_per_lot": 2726.7857142857147,
+      "notional_per_lot": 101930.0
+    },
+    {
+      "symbol": "RM0",
+      "name": "菜粕",
+      "sector": "农产品",
+      "date": "2026-09-16",
+      "last": 2381.0,
+      "chg": 0.041557305336832995,
+      "atr": 54.285714285714285,
+      "side": "long",
+      "side_prev": "short",
+      "evidence": {
+        "includes_partial_periods": true,
+        "monthly": {
+          "close": 2381.0,
+          "ma": 2322.7,
+          "ma_prev": 2326.1
+        },
+        "weekly": {
+          "close": 2381.0,
+          "ma": 2309.9,
+          "ma_prev": 2304.3
+        },
+        "daily": {
+          "close": 2381.0,
+          "ma": 2343.8,
+          "ma_prev": 2337.4
+        },
+        "side": "long"
+      },
+      "hold_change": -36451.0,
+      "quadrant": "价涨仓减",
+      "mult": 10.0,
+      "margin_rate": 13.0,
+      "margin": 3095.3,
+      "stop_distance": 81.42857142857143,
+      "stop_px": 2299.5714285714284,
+      "notes": [],
+      "lots": 20,
+      "risk_lots": 61,
+      "exposure_lots": 20,
+      "binding": "exposure",
+      "risk_per_lot": 814.2857142857143,
+      "notional_per_lot": 23810.0
+    },
+    {
+      "symbol": "FG0",
+      "name": "玻璃",
+      "sector": "建材",
+      "date": "2026-09-16",
+      "last": 910.0,
+      "chg": -0.013015184381778733,
+      "atr": 26.071428571428573,
+      "side": "short",
+      "side_prev": "short",
+      "evidence": {
+        "includes_partial_periods": true,
+        "monthly": {
+          "close": 910.0,
+          "ma": 1003.9,
+          "ma_prev": 1018.2
+        },
+        "weekly": {
+          "close": 910.0,
+          "ma": 913.0,
+          "ma_prev": 918.5
+        },
+        "daily": {
+          "close": 910.0,
+          "ma": 954.5,
+          "ma_prev": 959.6
+        },
+        "side": "short"
+      },
+      "hold_change": 68442.0,
+      "quadrant": "价跌仓增",
+      "mult": 20.0,
+      "margin_rate": 16.0,
+      "margin": 2912.0,
+      "stop_distance": 39.10714285714286,
+      "stop_px": 949.1071428571429,
+      "notes": [],
+      "lots": 27,
+      "risk_lots": 63,
+      "exposure_lots": 27,
+      "binding": "exposure",
+      "risk_per_lot": 782.1428571428572,
+      "notional_per_lot": 18200.0
+    },
+    {
+      "symbol": "SA0",
+      "name": "纯碱",
+      "sector": "建材",
+      "date": "2026-09-16",
+      "last": 1011.0,
+      "chg": -0.006876227897838927,
+      "atr": 33.714285714285715,
+      "side": "short",
+      "side_prev": "short",
+      "evidence": {
+        "includes_partial_periods": true,
+        "monthly": {
+          "close": 1011.0,
+          "ma": 1133.1,
+          "ma_prev": 1149.7
+        },
+        "weekly": {
+          "close": 1011.0,
+          "ma": 1016.3,
+          "ma_prev": 1023.6
+        },
+        "daily": {
+          "close": 1011.0,
+          "ma": 1056.7,
+          "ma_prev": 1061.2
+        },
+        "side": "short"
+      },
+      "hold_change": 15153.0,
+      "quadrant": "价跌仓增",
+      "mult": 20.0,
+      "margin_rate": 14.0,
+      "margin": 2830.8,
+      "stop_distance": 50.57142857142857,
+      "stop_px": 1061.5714285714287,
+      "notes": [],
+      "lots": 24,
+      "risk_lots": 49,
+      "exposure_lots": 24,
+      "binding": "exposure",
+      "risk_per_lot": 1011.4285714285713,
+      "notional_per_lot": 20220.0
+    },
+    {
+      "symbol": "AP0",
+      "name": "苹果",
+      "sector": "农产品",
+      "date": "2026-09-16",
+      "last": 7286.0,
+      "chg": -0.014739688979039878,
+      "atr": 137.28571428571428,
+      "side": "short",
+      "side_prev": "short",
+      "evidence": {
+        "includes_partial_periods": true,
+        "monthly": {
+          "close": 7286.0,
+          "ma": 8391.2,
+          "ma_prev": 8607.6
+        },
+        "weekly": {
+          "close": 7286.0,
+          "ma": 7626.3,
+          "ma_prev": 7669.1
+        },
+        "daily": {
+          "close": 7286.0,
+          "ma": 7432.0,
+          "ma_prev": 7440.1
+        },
+        "side": "short"
+      },
+      "hold_change": 17430.0,
+      "quadrant": "价跌仓增",
+      "mult": 10.0,
+      "margin_rate": 16.0,
+      "margin": 11657.6,
+      "stop_distance": 205.92857142857142,
+      "stop_px": 7491.928571428572,
+      "notes": [],
+      "lots": 6,
+      "risk_lots": 24,
+      "exposure_lots": 6,
+      "binding": "exposure",
+      "risk_per_lot": 2059.285714285714,
+      "notional_per_lot": 72860.0
+    },
+    {
+      "symbol": "UR0",
+      "name": "尿素",
+      "sector": "能化",
+      "date": "2026-09-16",
+      "last": 1807.0,
+      "chg": 0.008933556672250154,
+      "atr": 29.428571428571427,
+      "side": "flat",
+      "side_prev": "flat",
+      "evidence": {
+        "includes_partial_periods": true,
+        "monthly": {
+          "close": 1807.0,
+          "ma": 1815.4,
+          "ma_prev": 1802.4
+        },
+        "weekly": {
+          "close": 1807.0,
+          "ma": 1753.6,
+          "ma_prev": 1746.4
+        },
+        "daily": {
+          "close": 1807.0,
+          "ma": 1802.5,
+          "ma_prev": 1799.0
+        },
+        "side": "flat"
+      },
+      "hold_change": 336.0,
+      "quadrant": "价涨仓增",
+      "mult": 20.0,
+      "margin_rate": 15.0,
+      "margin": 5421.0,
+      "stop_distance": 44.14285714285714,
+      "stop_px": null,
+      "notes": [],
+      "lots": 13,
+      "risk_lots": 56,
+      "exposure_lots": 13,
+      "binding": "exposure",
+      "risk_per_lot": 882.8571428571428,
+      "notional_per_lot": 36140.0
+    },
+    {
+      "symbol": "PF0",
+      "name": "短纤",
+      "sector": "能化",
+      "date": "2026-09-16",
+      "last": 8712.0,
+      "chg": 0.028328611898017053,
+      "atr": 259.57142857142856,
+      "side": "long",
+      "side_prev": "long",
+      "evidence": {
+        "includes_partial_periods": true,
+        "monthly": {
+          "close": 8712.0,
+          "ma": 7504.8,
+          "ma_prev": 7258.6
+        },
+        "weekly": {
+          "close": 8712.0,
+          "ma": 7706.0,
+          "ma_prev": 7536.2
+        },
+        "daily": {
+          "close": 8712.0,
+          "ma": 8211.8,
+          "ma_prev": 8139.6
+        },
+        "side": "long"
+      },
+      "hold_change": 10755.0,
+      "quadrant": "价涨仓增",
+      "mult": 5.0,
+      "margin_rate": 15.0,
+      "margin": 6534.0,
+      "stop_distance": 389.35714285714283,
+      "stop_px": 8322.642857142857,
+      "notes": [],
+      "lots": 11,
+      "risk_lots": 25,
+      "exposure_lots": 11,
+      "binding": "exposure",
+      "risk_per_lot": 1946.7857142857142,
+      "notional_per_lot": 43560.0
+    },
+    {
+      "symbol": "IF0",
+      "name": "沪深300",
+      "sector": "股指",
+      "date": "2026-09-16",
+      "last": 4389.4,
+      "chg": null,
+      "atr": 65.25714285714282,
+      "side": "short",
+      "side_prev": "short",
+      "evidence": {
+        "includes_partial_periods": true,
+        "monthly": {
+          "close": 4389.4,
+          "ma": 4639.64,
+          "ma_prev": 4651.280000000001
+        },
+        "weekly": {
+          "close": 4389.4,
+          "ma": 4536.26,
+          "ma_prev": 4567.78
+        },
+        "daily": {
+          "close": 4389.4,
+          "ma": 4482.34,
+          "ma_prev": 4496.62
+        },
+        "side": "short"
+      },
+      "hold_change": 11256.0,
+      "quadrant": "数据不足",
+      "mult": 300.0,
+      "margin_rate": 14.0,
+      "margin": 184354.8,
+      "stop_distance": 97.88571428571424,
+      "stop_px": 4487.285714285714,
+      "notes": [
+        "前结算价缺失，不参与涨跌统计"
+      ],
+      "lots": 0,
+      "risk_lots": 1,
+      "exposure_lots": 0,
+      "binding": "exposure",
+      "risk_per_lot": 29365.71428571427,
+      "notional_per_lot": 1316820.0
+    },
+    {
+      "symbol": "IH0",
+      "name": "上证50",
+      "sector": "股指",
+      "date": "2026-09-16",
+      "last": 2807.2,
+      "chg": null,
+      "atr": 37.94285714285719,
+      "side": "short",
+      "side_prev": "short",
+      "evidence": {
+        "includes_partial_periods": true,
+        "monthly": {
+          "close": 2807.2,
+          "ma": 2937.2799999999997,
+          "ma_prev": 2952.88
+        },
+        "weekly": {
+          "close": 2807.2,
+          "ma": 2878.0600000000004,
+          "ma_prev": 2888.3599999999997
+        },
+        "daily": {
+          "close": 2807.2,
+          "ma": 2873.4,
+          "ma_prev": 2882.56
+        },
+        "side": "short"
+      },
+      "hold_change": 3776.0,
+      "quadrant": "数据不足",
+      "mult": 300.0,
+      "margin_rate": 14.0,
+      "margin": 117902.4,
+      "stop_distance": 56.91428571428579,
+      "stop_px": 2864.1142857142854,
+      "notes": [
+        "前结算价缺失，不参与涨跌统计"
+      ],
+      "lots": 0,
+      "risk_lots": 2,
+      "exposure_lots": 0,
+      "binding": "exposure",
+      "risk_per_lot": 17074.285714285736,
+      "notional_per_lot": 842160.0
+    },
+    {
+      "symbol": "IC0",
+      "name": "中证500",
+      "sector": "股指",
+      "date": "2026-09-16",
+      "last": 7485.0,
+      "chg": null,
+      "atr": 174.57142857142864,
+      "side": "short",
+      "side_prev": "short",
+      "evidence": {
+        "includes_partial_periods": true,
+        "monthly": {
+          "close": 7485.0,
+          "ma": 7989.9,
+          "ma_prev": 7938.82
+        },
+        "weekly": {
+          "close": 7485.0,
+          "ma": 7621.68,
+          "ma_prev": 7706.4800000000005
+        },
+        "daily": {
+          "close": 7485.0,
+          "ma": 7619.660000000001,
+          "ma_prev": 7638.719999999999
+        },
+        "side": "short"
+      },
+      "hold_change": 8158.0,
+      "quadrant": "数据不足",
+      "mult": 200.0,
+      "margin_rate": 14.0,
+      "margin": 209580.0,
+      "stop_distance": 261.85714285714295,
+      "stop_px": 7746.857142857143,
+      "notes": [
+        "前结算价缺失，不参与涨跌统计"
+      ],
+      "lots": 0,
+      "risk_lots": 0,
+      "exposure_lots": 0,
+      "binding": "both",
+      "risk_per_lot": 52371.42857142859,
+      "notional_per_lot": 1497000.0
+    },
+    {
+      "symbol": "IM0",
+      "name": "中证1000",
+      "sector": "股指",
+      "date": "2026-09-16",
+      "last": 7378.4,
+      "chg": null,
+      "atr": 182.5142857142859,
+      "side": "flat",
+      "side_prev": "short",
+      "evidence": {
+        "includes_partial_periods": true,
+        "monthly": {
+          "close": 7378.4,
+          "ma": 7881.56,
+          "ma_prev": 7869.8
+        },
+        "weekly": {
+          "close": 7378.4,
+          "ma": 7362.9400000000005,
+          "ma_prev": 7427.039999999999
+        },
+        "daily": {
+          "close": 7378.4,
+          "ma": 7493.2,
+          "ma_prev": 7509.4
+        },
+        "side": "flat"
+      },
+      "hold_change": 16673.0,
+      "quadrant": "数据不足",
+      "mult": 200.0,
+      "margin_rate": 14.0,
+      "margin": 206595.2,
+      "stop_distance": 273.7714285714288,
+      "stop_px": null,
+      "notes": [
+        "前结算价缺失，不参与涨跌统计"
+      ],
+      "lots": 0,
+      "risk_lots": 0,
+      "exposure_lots": 0,
+      "binding": "both",
+      "risk_per_lot": 54754.28571428577,
+      "notional_per_lot": 1475680.0
+    },
+    {
+      "symbol": "SI0",
+      "name": "工业硅",
+      "sector": "有色",
+      "date": "2026-09-16",
+      "last": 8440.0,
+      "chg": -0.005889281507656108,
+      "atr": 161.07142857142858,
+      "side": "flat",
+      "side_prev": "flat",
+      "evidence": {
+        "includes_partial_periods": true,
+        "monthly": {
+          "close": 8440.0,
+          "ma": 8570.0,
+          "ma_prev": 8639.0
+        },
+        "weekly": {
+          "close": 8440.0,
+          "ma": 8557.0,
+          "ma_prev": 8556.0
+        },
+        "daily": {
+          "close": 8440.0,
+          "ma": 8677.5,
+          "ma_prev": 8698.5
+        },
+        "side": "flat"
+      },
+      "hold_change": 7922.0,
+      "quadrant": "价跌仓增",
+      "mult": 5.0,
+      "margin_rate": 16.0,
+      "margin": 6752.0,
+      "stop_distance": 241.6071428571429,
+      "stop_px": null,
+      "notes": [],
+      "lots": 11,
+      "risk_lots": 41,
+      "exposure_lots": 11,
+      "binding": "exposure",
+      "risk_per_lot": 1208.0357142857144,
+      "notional_per_lot": 42200.0
+    },
+    {
+      "symbol": "LC0",
+      "name": "碳酸锂",
+      "sector": "有色",
+      "date": "2026-09-16",
+      "last": 125820.0,
+      "chg": -0.029466214131440904,
+      "atr": 5958.571428571428,
+      "side": "short",
+      "side_prev": "short",
+      "evidence": {
+        "includes_partial_periods": true,
+        "monthly": {
+          "close": 125820.0,
+          "ma": 155978.0,
+          "ma_prev": 153038.0
+        },
+        "weekly": {
+          "close": 125820.0,
+          "ma": 144828.0,
+          "ma_prev": 147406.0
+        },
+        "daily": {
+          "close": 125820.0,
+          "ma": 138290.0,
+          "ma_prev": 141186.0
+        },
+        "side": "short"
+      },
+      "hold_change": -1204.0,
+      "quadrant": "价跌仓减",
+      "mult": 1.0,
+      "margin_rate": 26.0,
+      "margin": 32713.2,
+      "stop_distance": 8937.857142857143,
+      "stop_px": 134757.85714285713,
+      "notes": [],
+      "lots": 3,
+      "risk_lots": 5,
+      "exposure_lots": 3,
+      "binding": "exposure",
+      "risk_per_lot": 8937.857142857143,
+      "notional_per_lot": 125820.0
+    }
+  ],
+  "issues": [],
+  "expected": 51,
+  "new_long": [
+    "豆粕",
+    "菜粕"
+  ],
+  "new_short": [],
+  "weekday": "周三",
+  "top": [
+    "菜粕",
+    "沥青",
+    "乙二醇"
+  ],
+  "bottom": [
+    "碳酸锂",
+    "苯乙烯",
+    "生猪"
+  ],
+  "generated_at": "2026-09-17T20:52:55+08:00",
+  "source": "AkShare futures_main_sina / 新浪主力连续",
+  "collected_at": "2026-09-17T20:42:06+08:00",
+  "rule_date_requested": "2026-09-16",
+  "equity_assumption": 5000000,
+  "calculation_code_hashes": {
+    "daily_report.py": "2834f79bd07376daedb3dd34ddecb1a3b02b49d84afb4689d5c5b451e08ee875",
+    "report_core.py": "3691951fdae515ab566558aa513c236cd661da9ae5e438512fefd2b2280bd53b",
+    "report_writer.py": "580811636a3fecc1305e8a85971ff7bb8111f0fff9ffc2d2da31d64fb95de23d",
+    "market_config.py": "aed600038bab423ab5b6bcc35c70b6dca80f1a79e3d10d991ca69a994e714cda"
+  }
+}

@@ -1,5 +1,5 @@
 {
-  "_comment": "复制本文件为 config.local.json 并填入你自己的 ID；config.local.json 已被 .gitignore 忽略，切勿提交。",
+  "_comment": "部署设计参考，Python脚本不会自动加载本文件或安装定时任务。复制为config.local.json后需自行实现发布编排；假设权益使用CLI的--equity参数。",
   "chat_id": "oc_xxxxxxxxxxxxxxxxxxxxxxxx",
   "bitable": {
     "base_token": "bascnXXXXXXXXXXXXXXXXXXXXXX",

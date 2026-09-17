@@ -10,11 +10,11 @@
 本脚本只读，不下单、不撤单；任何平仓动作必须用户手动确认。
 """
 import subprocess, json, sys, datetime
+from report_core import number, prepare_history, atr14, position_size
 
 CONTRACT = "AU2612"
 MULT = 1000          # 黄金合约乘数 1000 克/手
 RISK_PCT = 0.01      # 单笔风险预算 1%
-LIMIT_PCT = 0.06     # 黄金涨跌停 6%（交易所标准）
 
 def panda(args):
     try:
@@ -29,13 +29,9 @@ def get_atr():
     """用 AkShare 日 K 算 ATR(14)，失败返回 None。"""
     try:
         import akshare as ak
-        d = ak.futures_zh_daily_sina(symbol=CONTRACT).tail(20).reset_index(drop=True)
-        trs = []
-        for i in range(1, len(d)):
-            h, l = float(d.loc[i, "high"]), float(d.loc[i, "low"])
-            ps = float(d.loc[i - 1, "settle"]) or float(d.loc[i - 1, "close"])
-            trs.append(max(h - l, abs(h - ps), abs(l - ps)))
-        return round(sum(trs[-14:]) / len(trs[-14:]), 2)
+        d = ak.futures_zh_daily_sina(symbol=CONTRACT).rename(columns={
+            'date':'日期','open':'开盘价','high':'最高价','low':'最低价','close':'收盘价'})
+        return atr14(prepare_history(d))
     except Exception:
         return None
 
@@ -50,6 +46,10 @@ def main():
     now = datetime.datetime.now()
     acct = panda(["account"])
     positions = panda(["positions"])
+    if not isinstance(acct, dict) or not isinstance(positions, list):
+        print("LEVEL=ERROR")
+        print("账户或持仓查询失败，当前持仓未知；停止生成账户风险结论。")
+        return
     q = panda(["quote", CONTRACT])
     atr = get_atr()
 
@@ -59,6 +59,9 @@ def main():
               f"请人工打开行情核对；账户/持仓命令需在云电脑复查。时间 {now:%Y-%m-%d %H:%M}")
         return
 
+    if any(number(q.get(k), True) is None for k in ('latestPrice','preclose','limitUp','limitDown')):
+        print("LEVEL=ERROR\n行情关键字段缺失，停止风险计算。")
+        return
     last = float(q["latestPrice"])
     pre = float(q.get("preclose") or 0)
     up, dn = float(q.get("limitUp") or 0), float(q.get("limitDown") or 0)
@@ -69,27 +72,39 @@ def main():
     dist_up = (last - dn) / (up - dn) if up > dn else 0.5      # 距跌停 0 / 距涨停 1
     amp = (hi - lo) / pre if pre else 0
 
-    equity = 5_000_000.0
-    if isinstance(acct, dict):
-        equity = float(acct.get("availableFunds", 0) or 0) + float(acct.get("margin", 0) or 0) or 5_000_000.0
+    # Only an explicit equity field is accepted. Do not guess its meaning from available funds.
+    equity = number(acct.get('equity'), True)
+    if equity is None:
+        print("LEVEL=ERROR\n未取得明确的 equity 权益字段；请核对柜台字段映射，不能用500万元代替实际权益。")
+        return
     risk_budget = equity * RISK_PCT
 
     # 解析黄金持仓（防御性：字段名随柜台可能不同）
     gold_pos = None
+    matches = []
     if isinstance(positions, list):
         for p in positions:
             code = str(pick(p, "contractCode", "symbol", "instrumentId", default="")).upper()
             if code.startswith("AU"):
-                gold_pos = p
-                break
+                if code != CONTRACT:
+                    print(f"LEVEL=ERROR\n存在其他黄金合约 {code}，不能用 {CONTRACT} 价格计算其盈亏。")
+                    return
+                matches.append(p)
+    if len(matches)>1:
+        print("LEVEL=ERROR\n同合约存在多条持仓，尚未完成逐笔归并，停止输出简化盈亏。")
+        return
+    gold_pos = matches[0] if matches else None
 
     level, head, lines = "NONE", "", []
 
     if gold_pos:
         vol = pick(gold_pos, "volume", "position", "totalVolume", "total", default=0)
-        side = str(pick(gold_pos, "direction", "side", "posSide", "offsetFlag", default="多"))
-        open_px = float(pick(gold_pos, "openPrice", "avgPrice", "costPrice", "openCost", default=last) or last)
-        sign = -1 if ("空" in side or side.upper() in ("SHORT", "SELL", "2")) else 1
+        side = str(pick(gold_pos, "direction", "side", "posSide", default=""))
+        open_px = number(pick(gold_pos, "openPrice", "avgPrice"), True)
+        if side.upper() not in ('多','空','LONG','SHORT','BUY','SELL') or open_px is None or number(vol,True) is None:
+            print("LEVEL=ERROR\n持仓方向、均价或数量不可识别，停止猜测盈亏。")
+            return
+        sign = -1 if side.upper() in ('空','SHORT','SELL') else 1
         pnl = sign * (last - open_px) * MULT * float(vol or 0)
         ratio = abs(pnl) / risk_budget if pnl < 0 else 0
         lines += [f"持仓：{CONTRACT} {side} {vol} 手，开仓均价 {open_px:.2f}，现价 {last:.2f}",
@@ -104,15 +119,17 @@ def main():
             head = "🟢 黄金持仓·正常"
     else:
         # 无持仓：开仓前观察 + 异常波动提示
-        lots_1atr = int(risk_budget / (atr * MULT)) if atr else None
+        sizing = position_size(last, 1.5*atr if atr else None, MULT, equity)
         lines += [f"最新价 {last:.2f}（{chg:+.2f}，{chg_pct*100:+.2f}%），今开 {float(q.get('open') or 0):.2f}，"
                   f"高 {hi:.2f} / 低 {lo:.2f}，持仓量 {oi}",
                   f"涨跌停区间 {dn:.2f} ~ {up:.2f}；当前位于区间 {dist_up*100:.0f}% 处"]
         if atr:
             lines.append(f"ATR(14)≈{atr:.2f} 元/克（约 {atr*MULT:,.0f} 元/手·日）；"
-                         f"1% 预算 {risk_budget:,.0f} 元、1×ATR 止损最多开 {lots_1atr} 手")
+                         f"1%预算 {risk_budget:,.0f} 元，1.5×ATR 与10%敞口约束下参考上限 {sizing['lots']} 手；乘数按1000克/手假设")
         # 异常波动：已走出涨跌停幅度 70%，或当日振幅显著大于 ATR
-        abnormal = abs(chg_pct) >= 0.7 * LIMIT_PCT or (atr and amp >= 1.5 * atr / last)
+        midpoint = (up+dn)/2
+        limit_fraction = (up-dn)/2/midpoint if up>dn and midpoint>0 else None
+        abnormal = (limit_fraction and abs(chg_pct) >= .7*limit_fraction) or (atr and amp >= 1.5*atr/last)
         if abnormal:
             level, head = "WARN", "🟠 黄金异常波动（无持仓，今日勿追单，谨慎开仓）"
         elif force_brief or (15 <= now.hour < 16):
